@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+
+    <!-- Make the weather app containers and form here -->
+      <div id="weather-container">
+            <h1 id="name">Weather App</h1>
+            <form id="location-form">
+                <input type="text" id="location-input" placeholder="Enter a city" required>
+                 <button id="location-button" type="submit">Get Weather</button>
+            </form>
+            <div class="error">
+              <p>Failed to fetch weather data</p>
+
+            </div>
+            <div id="weather-data">
+                <img src="photos/sun (1).png" class="weather-icon">
+                <h1 class="temp">26</h1>
+                <h2 class="city">Bhubaneswar</h2>
+            </div>
+        </div>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>

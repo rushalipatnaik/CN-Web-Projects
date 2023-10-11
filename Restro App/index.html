@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- ... -->
+        <title>Restaurant Menu</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Ensure to include Bootstrap CSS as it's checked in the test cases -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!-- ... -->
+        <link rel="stylesheet" type="text/css" href="styles.css"> 
+    </head>
+<body>
+    
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">The Oberoi's</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <input class="form-control mr-sm-2" type="search" id="search-input" placeholder="Search" aria-label="Search">
+                </li>
+                <li class="nav-item">
+                    <button class="filter-button nav-link" data-filter="all">All</button>
+                </li>
+                <li class="nav-item">
+                    <button class="filter-button nav-link" data-filter="starters">Starters</button>
+                </li>
+                <li class="nav-item">
+                    <button class="filter-button nav-link" data-filter="mains">Mains</button>
+                </li>
+                <li class="nav-item">
+                    <button class="filter-button nav-link" data-filter="desserts">Desserts</button>
+                </li>
+                <li class="nav-item">
+                    <button class="filter-button nav-link" id="last-filter" data-filter="beverages">Beverages</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Menu items -->
+    <div class="container">
+        <div id="menu" class="row">
+          <!-- Items will be inserted here by JavaScript -->
+        </div>
+      </div>
+
+    <!-- ... (any other required content) -->
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</html>

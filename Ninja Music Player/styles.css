@@ -1,0 +1,187 @@
+/* Write your desired css */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,500;1,300&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+
+    font-family: 'Jost', sans-serif;
+}
+
+.audio-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+    display: grid;
+    place-items: center;
+    justify-content: space-around;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    box-shadow:0 1.2rem 3rem 0.5rem rgba(87, 6, 60, 0.8);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.audio-img {
+    width: 30rem;
+    height: 30rem;
+    margin: auto;
+}
+
+.app-title{
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    color: rgba(179, 8, 122, 0.8);
+    margin: 2rem 0 0.5rem 0;
+    font-size: 3rem;
+    font-weight: 300;
+    text-shadow: 0 0.3rem 0.5rem rgba(107, 5, 73, 0.8);
+}
+
+.audio-img-wrapper{
+    width: 45rem;
+    height: 60rem;
+    background-color: palevioletred;
+    border-radius: 2rem;
+    box-shadow: 0 1.2rem 3rem rgba(107, 5, 73, 0.8);
+    padding: 3rem;
+    text-align: center;
+}
+
+.audio-img-wrapper .audio-title{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: rgba(128, 2, 86, 0.8);
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgba(107, 5, 73, 0.8);
+}
+
+.audio-img-wrapper .audio-singer{
+    color:rgba(128, 2, 86, 0.8);
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    margin-bottom: 4rem;
+    font-weight: 400;
+    font-size: 2.2rem;
+    text-shadow: 0 0.1rem 0.5rem rgba(51, 0, 34, 0.8);
+}
+
+
+.audio-btns{
+    width: 20rem; 
+    height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 5rem;
+  align-items: center;
+}
+
+.audio-btns .fas{
+    background-color: palevioletred;
+    color: rgba(51, 0, 34, 0.8);
+    font-size: 3rem;
+    cursor: pointer;
+    filter: drop-shadow(0 1.2rem 3rem rgba(87, 6, 60, 0.8)); 
+}
+
+.audio-btns #play{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: rgba(87, 6, 60, 0.8); 
+    color: palevioletred;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play{
+    background: palevioletred;
+    text-align: center;
+    border: none;
+    padding: 1rem 1.2rem;
+}
+.btn{
+    background: palevioletred;
+    border: none;
+}
+.audio-btns .fas:hover{
+    color: rgba(158, 63, 125, 0.8);
+    text-shadow: 0 1rem 2rem rgba(107, 5, 73, 0.8);
+}
+
+.audio-btns .fa-play:hover{
+    background-color: palevioletred;
+    color: rgba(51, 0, 34, 0.8);
+    box-shadow: 0 1rem 2rem rgba(107, 5, 73, 0.8);
+}
+.audio-progress {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 120%;
+    height: 50%;
+}
+.progress {
+    grid-column: 1 / -1;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    background-color: rgba(107, 5, 73, 0.8);
+    height: 0.9rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-head {
+    position: absolute;
+    background-color: #fafafa;
+    height: 2rem;
+    width: 2rem;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -32%);
+    border-radius: 100%;
+    z-index: 2;
+    box-shadow: 0 0 0 3px #aaabf8;
+}
+
+.progress-bar {
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    width: 0%;
+    border-radius: 0.8rem;
+}
+.current-time {
+    text-align: left;
+    margin-left: 0.5rem;
+    font-size: large;
+}
+
+.duration {
+    text-align: end;
+    margin-right: 0.5rem;
+    font-size: large;
+}
+
+.anime{
+    animation: rotatePlayer 20s linear infinite;
+}
+@keyframes rotatePlayer {
+    from {transform: rotate(0deg);}
+    to { 
+        transform: rotate(360deg);
+    }
+}

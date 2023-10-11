@@ -1,0 +1,89 @@
+@media (min-width: 576px) {
+    body {
+        font-size: 16px;
+      }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1300px;
+      }
+}
+
+.navbar {
+    padding-top: 15px; 
+    padding-bottom: 15px; 
+    margin-bottom: 20px; 
+}
+
+.navbar-brand {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 20px; /* Add padding to the links (vertical and horizontal) */
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+#search-input {
+   
+    margin-right: 1005px !important; /* Add right margin to create space between search bar and filter button */
+    margin-left: -20px;
+}
+#last-filter{
+    margin-right: 20px;
+}
+
+
+.filter-button {
+    margin-right: 5px; 
+    font-size: 16px; 
+    padding: 6px 16px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #007bff; 
+    color: #fff; 
+    font-weight: bolder;
+    transition: background-color 0.3s ease;
+    cursor: pointer; 
+}
+
+/* Hover effect for filter buttons */
+.filter-button:hover {
+    background-color: #0056b3; 
+}
+
+.card-img-top {
+    height: 200px; /* Set a fixed height for the card images */
+    object-fit: cover; /* Ensure the image covers the entire card */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box-shadow effect */
+    transition: transform 0.2s; /* Add a smooth hover effect */
+    margin: 1rem 1rem 1rem 1rem;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Move the card up slightly on hover */
+}
+
+#filter-list.hidden {
+    display: none;
+}
+
+.card-title {
+    color: #16a085;
+  }
+  
+  .card-subtitle {
+    color: #8e44ad;
+  }
+  
+  .card-text {
+    color: #c0392b;
+  }
+  

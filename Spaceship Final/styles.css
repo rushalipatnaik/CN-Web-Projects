@@ -1,0 +1,109 @@
+/* Add the desired style here */
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    overflow: hidden;
+    background: url("Images/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");
+    background-size: contain;
+  }
+
+
+#gameCanvas{
+  position: relative;
+      width: 755px;
+      height: 550px;
+      margin: 40px auto;
+      border: 2px solid white;
+      background-color: rgb(17, 16, 16);
+      overflow: hidden;
+      margin-top: 10%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.rocks {
+  position: absolute;
+  top: 0px;
+  width: 55px;
+  height: 55px;
+  background: url("Images/ufo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#jet {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: url("Images/jet.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 50%;
+  bottom: 3px;
+}
+
+.bullets {
+  position: absolute;
+  bottom: 60px;
+  left: 53%;
+  width: 20px;
+  height: 20px;
+  background: url("Images/bullet\ \(1\).png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#gameOverScreen{
+  display: none;
+  margin-right: 100px;
+}
+
+#scoreContainer {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
+
+#gameOptions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: white;
+  z-index: 2;
+}
+#timerContainer {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  color: white;
+  z-index: 2;
+}
+
+#finalHighestScore{
+  font-size: 1.5em;
+}
+
+#startButton {
+  height: 50px;
+  width: 150px;
+  position: absolute;
+  top: 30px;
+  left: 50%; /* Position at the horizontal center */
+  transform: translateX(-50%); /* Center horizontally */
+  padding: 5px 15px;
+  background-color: #000000;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+
+
