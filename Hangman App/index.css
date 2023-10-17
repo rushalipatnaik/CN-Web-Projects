@@ -1,0 +1,118 @@
+body {
+  background-color: #4b4949;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.container{
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  text-align: center;
+  }
+  
+  .hangman-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+.hangman{
+  position: relative;
+  height: 250px;
+  width: 150px;
+  background-color: black;
+  padding: 50px;
+  }
+
+  .body{
+    display: none;
+    position: absolute;
+    height: 260px;
+    width: 20px;
+    background-color: #ff3333;
+    top: 40px;
+    left: 95px;
+    border-radius: 30%;
+    margin-left: 25px;
+    }
+
+.head {
+  display: none;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ff3333;
+  top: 10px;
+  left: 90px;
+}
+
+.left-arm,
+.right-arm {
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  border-radius: 40%;
+  background-color: #ff3333;
+  top: 150px;
+}
+
+.left-arm {
+  display: none;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 60px;
+}
+
+.right-arm {
+  display: none;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 50px;
+}
+
+.left-leg,
+.right-leg {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  border-radius: 40%;
+  background-color: #ff3333;
+  top: 255px;
+}
+
+.left-leg {
+  display: none;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 45px;
+}
+
+.right-leg {
+  display: none;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 35px;
+}
+
+.word-display {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.guesses {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+   margin: 15px;
+}
+
+
+
+
+
