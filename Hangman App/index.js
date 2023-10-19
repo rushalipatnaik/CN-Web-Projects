@@ -13,13 +13,17 @@ const guessesDisplay = document.getElementById('guesses');
 
 
 function checkWin() {
-  wordDisplay.innerHTML = 'Congratulations! You won!';
-  setWinBackgroundColor();
+  if (selectedWord.split('').every(letter => guessedLetters.includes(letter))) {
+    wordDisplay.innerHTML = 'Congratulations! You won!';
+    setWinBackgroundColor(); 
+  }
 }
 
 function checkLoss() {
+    if(remainingAttempts <= 0 && !wordDisplay.textContent.includes('Congratulations')){
     wordDisplay.textContent = "Game over! You lost.";
     setLossBackgroundColor();
+    }
 }
 
 function showHangmanParts() {
@@ -70,17 +74,10 @@ function guessLetter() {
 
   updateDisplayedWord();
   updateGuessesDisplay();
-  
+  checkLoss();
+  checkWin();
   guessInput.value = '';
-
-  if (remainingAttempts <= 0 && !wordDisplay.textContent.includes('Congratulations')) {
     checkLoss();
-    wordDisplay.textContent = "Game over! You lost.";
-  }
-  if (selectedWord==wordDisplay.toLowerCase()) {
-    checkWin();
-      wordDisplay.innerHTML = 'Congratulations! You won!';
-  }
 
 }
 
