@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const fileList = document.getElementById('fileList');
     const MAX_IMAGES = 5;
 
-    //Write the code of all the dropzone functionality here
+    // Write the code for all the dropzone functionality here
     dropzone.addEventListener('dragover', handleDragOver, false);
     dropzone.addEventListener('dragleave', handleDragLeave, false);
     dropzone.addEventListener('drop', handleDrop, false);
@@ -23,53 +23,89 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         dropzone.classList.remove('drag-over');
         const files = e.dataTransfer.files;
-        if (files.length) {
-            handleFiles(files);
-        }
+        handleFiles(files);
     }
+
+    fileInput.addEventListener('change', (e) => {
+        const files = e.target.files;
+        handleFiles(files);
+    });
+
+    dropzone.addEventListener('click', () => {
+        fileInput.click();
+    });
 
     function handleFiles(files) {
         for (let i = 0; i < files.length; i++) {
-            if (images.length < MAX_IMAGES && images.every(img => img.name !== files[i].name)) {
-                const file = files[i];
-                if (file.type.match('image.*') && file.size <= 1048576) {
-                    images.push(file);
-                    displayFile(file);
-                } else {
-                    alert('Invalid file. Please upload images under 1MB.');
-                }
-            } else {
-                alert('You can upload a maximum of 5 images.');
+            // check if the file is an image
+            if (!files[i].type.startsWith('image/')) {
+                alert("File " + files[i].name + " is not an image.");
+                continue;
             }
+
+            if (files[i].size > 1048576) {
+                alert("File " + files[i].name + " is larger than 1MB.");
+                continue;
+            }
+            let totalFiles = fileList.children.length;
+            totalFiles++;
+            if (totalFiles > MAX_IMAGES) {
+                alert("Maximum images allowed is " + MAX_IMAGES + ". " + files[i].name + " won't be added.");
+                break;
+            }
+
+            displayFile(files[i]);
         }
+
+        while (fileList.children.length > MAX_IMAGES) {
+            fileList.removeChild(fileList.firstChild);
+        }
+
+        saveToLocalStorage();
     }
-    
+
+     // Function to save data to localStorage
+     function saveToLocalStorage() {
+        const imagesData = [];
+        const fileItems = fileList.children;
+        for (let i = 0; i < fileItems.length; i++) {
+            const fileItem = fileItems[i];
+            const imageSrc = fileItem.querySelector('.thumbnail').src;
+            const imageDescription = fileItem.querySelector('textarea').value;
+            imagesData.push({ src: imageSrc, description: imageDescription });
+        }
+        localStorage.setItem('storedImagesData', JSON.stringify(imagesData));
+    }
 
     function displayFile(file) {
         const reader = new FileReader();
-        
+
         reader.onload = function(e) {
             const div = document.createElement('div');
             div.className = 'file-name';
-        
+
             const img = document.createElement('img');
             img.src = e.target.result;
             img.alt = file.name;
             img.className = 'thumbnail';
             div.appendChild(img);
-    
-            //Complete the function here
+
+            // Add textarea for description
             const textarea = document.createElement('textarea');
             textarea.placeholder = 'Enter description...';
             div.appendChild(textarea);
 
             const deleteBtn = document.createElement('button');
-            deleteBtn.innerText = 'Delete';
             deleteBtn.className = 'delete-btn';
             deleteBtn.addEventListener('click', function() {
                 deleteImage(file.name);
                 fileList.removeChild(div);
             });
+
+            const icon = document.createElement('i');
+            icon.className = 'fa fa-trash'; // Replace with your desired icon class
+            deleteBtn.appendChild(icon);
+
             div.appendChild(deleteBtn);
 
             fileList.appendChild(div);
@@ -78,17 +114,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function deleteImage(fileName) {
-        images = images.filter(img => img.name !== fileName);
-        saveToLocalStorage();
-    }
-
-    // Function to save data to localStorage
-    function saveToLocalStorage() {
-        localStorage.setItem('storedImagesData', JSON.stringify(images));
+        const imagesData = JSON.parse(localStorage.getItem('storedImagesData') || '[]');
+        const updatedImages = imagesData.filter(data => data.src !== fileName);
+        localStorage.setItem('storedImagesData', JSON.stringify(updatedImages));
     }
 
 
-    //Function to load the data from localStorage
+
+
+    // Function to load data from localStorage
     function loadFromLocalStorage() {
         const storedImagesData = JSON.parse(localStorage.getItem('storedImagesData') || '[]');
         console.log("Loaded from localStorage:", storedImagesData);
@@ -97,47 +131,34 @@ document.addEventListener("DOMContentLoaded", function() {
             div.className = 'file-name';
     
             const img = document.createElement('img');
-            img.src = data.src;
+            img.src = data.src; // Use data.src instead of e.target.result
+            img.alt = data.name; // Use data.name instead of file.name
             img.className = 'thumbnail';
             div.appendChild(img);
-            
-            // Write rest of the code here
+    
+            // Add textarea for description
             const textarea = document.createElement('textarea');
-            textarea.value = data.description;
+            textarea.placeholder = 'Enter description...';
             div.appendChild(textarea);
-
+    
             const deleteBtn = document.createElement('button');
-            deleteBtn.innerText = 'Delete';
             deleteBtn.className = 'delete-btn';
             deleteBtn.addEventListener('click', function() {
-                deleteImage(data.name);
+                deleteImage(data.src); // Use data.src instead of data.name
                 fileList.removeChild(div);
+                 saveToLocalStorage();
             });
+    
+            const icon = document.createElement('i');
+            icon.className = 'fa fa-trash'; // Replace with your desired icon class
+            deleteBtn.appendChild(icon);
+    
             div.appendChild(deleteBtn);
-
+    
             fileList.appendChild(div);
-            
         });
     }
-    loadFromLocalStorage();
-
-
-    // JavaScript for automatic carousel slide
-let slideIndex = 0;
-carousel();
-
-function carousel() {
-  let i;
-  const x = document.getElementsByClassName("carousel-item");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}    
-  x[slideIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-
     
-});
 
+    loadFromLocalStorage();
+});
