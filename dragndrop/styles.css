@@ -2,7 +2,6 @@
 body {
     height: 100vh;
     font-family: 'Open-Sans', sans-serif;
-    background-color: #f4285e; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +24,11 @@ body {
     animation: carouselSlide 10s infinite;
 }
 
-.carousel-item {
+.carousel-img {
     flex: 1;
     width: 100vw;
     height: 100vh;
-    background-size: cover;
+    object-fit: cover;
     background-position: center;
 }
 
@@ -84,11 +83,6 @@ h1 {
     text-decoration: underline;
 }
 
-.dropzone i {
-    font-size: 40px;
-    color: #ff0f0f; 
-    margin-bottom: 15px;
-}
 
 .file-list {
     margin-top: 20px;
