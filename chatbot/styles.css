@@ -1,0 +1,136 @@
+/* Write your desired css here */
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .chatbot-toggler {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chatbot {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .chatbot.open {
+    display: block;
+  }
+  
+  /* Header Section */
+  .chatbot header {
+    background: #0073e6;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chatbot header h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .chatbot .close-btn {
+    cursor: pointer;
+  }
+  
+  /* Chatbox */
+  .chatbox {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+  }
+  
+  .chatbox li {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .chat.incoming {
+    justify-content: flex-start;
+  }
+  
+  .chat.outgoing {
+    justify-content: flex-end;
+  }
+  
+  .chat .material-symbols-outlined {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .chat p {
+    background: #f1f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+  }
+  
+  /* Chat Input Area */
+  .chat-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .chat-input textarea {
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    font-size: 14px;
+  }
+  
+  #send-btn {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #0073e6;
+  }
+  
+  /* Typing Animation */
+  .typing {
+    color: #0073e6;
+    font-style: italic;
+    animation: typing-animation 1s infinite alternate;
+  }
+  
+  @keyframes typing-animation {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
