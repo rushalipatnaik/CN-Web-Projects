@@ -1,0 +1,61 @@
+/* Beverage.css */
+
+.cocktail-section {
+  padding: 1rem;
+  background-color: #f7f7f7;
+}
+
+.drink {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  margin-bottom: 2rem;
+}
+
+.drink:hover {
+  transform: scale(1.02);
+}
+
+.drink img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  align-self: center;
+}
+
+.drink-info {
+  padding: 1rem;
+}
+
+.drink-data {
+  font-weight: bold;
+}
+
+.ingredients-list {
+  list-style-type: disc;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .drink {
+    flex-direction: row;
+  }
+
+  .drink img {
+    margin: 1rem;
+    max-width: 40%;
+    align-self: auto;
+  }
+
+  .drink-info {
+    padding: 1rem;
+    flex: 1;
+  }
+}

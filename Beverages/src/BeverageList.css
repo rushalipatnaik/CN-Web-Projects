@@ -1,0 +1,103 @@
+/* BeverageList.css */
+
+/* Style for the entire cocktail list section */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the section title */
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style for the container of cocktail cards */
+.cocktails-center {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Style for individual cocktail cards */
+.cocktail {
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+/* Style for the cocktail image */
+.cocktail .img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.cocktail img {
+  width: 100%;
+  display: block;
+}
+
+/* Style for the cocktail footer (name, glass, info, and details button) */
+.cocktail .cocktail-footer {
+  padding: 1rem;
+}
+
+.cocktail h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cocktail h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.cocktail p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.cocktail .btn-details {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.cocktail .btn-details:hover {
+  background: #0056b3;
+}
+
+/* Media queries for responsiveness */
+
+/* Large Screens (> 1270px) */
+@media (min-width: 1270px) {
+  .cocktails-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Medium Screens (576px to 1270px) */
+@media (min-width: 576px) and (max-width: 1270px) {
+  .cocktails-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Screens (< 576px) */
+@media (max-width: 575px) {
+  .cocktails-center {
+    grid-template-columns: 1fr;
+  }
+}
