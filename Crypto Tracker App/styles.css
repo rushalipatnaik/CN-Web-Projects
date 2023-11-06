@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #33459d, #045801);
+  }
+  
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+    width: 450px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .crypto-info {
+    margin-bottom: 20px;
+  }
+  
+  .crypto-info select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .alert-setup input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #alert-message {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
