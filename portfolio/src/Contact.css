@@ -1,0 +1,61 @@
+/* Contact.css */
+.contact-form {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.w-left,
+.awesome {
+  flex: 1;
+}
+
+.w-left {
+  background-color: #333;
+  height: 100px; /* Adjust height as needed */
+}
+
+.awesome {
+  background-color: #f4f4f4;
+  height: 100px; /* Adjust height as needed */
+}
+
+.c-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #555;
+}

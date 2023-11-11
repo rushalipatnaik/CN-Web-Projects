@@ -1,0 +1,46 @@
+/* Intro.css */
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.intro {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .i-name {
+    margin-bottom: 20px;
+  }
+  
+  .i-name span {
+    display: block;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .i-icons {
+    margin-bottom: 20px;
+  }
+  
+  .i-icons a {
+    margin: 0 10px;
+  }
+  
+  .button.i-button {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+  }
+  
+  .button.i-button:hover {
+    background-color: #555;
+  }
+  

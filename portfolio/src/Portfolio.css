@@ -1,0 +1,53 @@
+/* Portfolio.css */
+.portfolio {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .portfolio h2 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .portfolio-slider {
+    margin-top: 30px;
+  }
+  
+  .slick-slider {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .slick-slide {
+    margin: 0 10px;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    color: #555;
+  }
+  
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots button {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .slick-dots .slick-active button {
+    color: #555;
+  }
+  

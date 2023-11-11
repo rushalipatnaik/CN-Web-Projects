@@ -1,0 +1,80 @@
+/* Navbar.css */
+.n-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+  }
+  
+  .n-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .n-name {
+    margin-right: 20px;
+  }
+  
+  .n-name h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+  }
+  
+  .n-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .n-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .n-list li {
+    margin-right: 20px;
+  }
+  
+  .n-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+  }
+  
+  .toggle, .button {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #f4f4f4;
+    border: none;
+    color: #333;
+  }
+  
+  .toggle:hover, .button:hover {
+    background-color: #ddd;
+  }
+
+  .toggle {
+    background-color: #f4f4f4;
+    border: none;
+    color: #333;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .toggle.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+  
+  .n-wrapper {
+    /* ... existing styles ... */
+    transition: background-color 0.3s ease;
+  }
+  
+  .n-wrapper.dark-mode {
+    background-color: #222;
+  }

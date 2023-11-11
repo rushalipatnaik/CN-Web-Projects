@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Contact.css */
+:root {
+  --background-light: #f4f4f4;
+  --background-dark: #333;
+  --text-light: #333;
+  --text-dark: #fff;
+  --button-background: #333;
+  --button-text: #fff;
+  --button-hover: #555;
+}
+
+.contact-form {
+  background-color: var(--background-light);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.w-left,
+.awesome {
+  flex: 1;
+}
+
+.w-left {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.awesome {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.c-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 1.2em;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border: none;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+

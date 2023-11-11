@@ -1,0 +1,26 @@
+/* Footer.css */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .f-content {
+    margin-bottom: 10px;
+  }
+  
+  .f-content span {
+    color: #f4f4f4;
+  }
+  
+  .f-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .f-icons a:hover {
+    color: #f4f4f4;
+  }
+  

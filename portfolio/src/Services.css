@@ -1,0 +1,39 @@
+/* Services.css */
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .awesome {
+    margin-bottom: 30px;
+  }
+  
+  .awesome h2 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .card {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .card p {
+    color: #666;
+  }
+  
